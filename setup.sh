@@ -83,10 +83,11 @@ sudo apt-get -y install cmake
 
 echo "Setting wallpaper"
 cp wallpaper.jpg ~/Pictures/wallpaper.jpg
-gsettings set org.gnome.desktop.background picture-uri file:///home/yura/Pictures/wallpaper.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/$USER/Pictures/wallpaper.jpg
 
 echo "Setting up sudo without password"
-sudo sh -c 'echo "yura ALL=(ALL) NOPASSWD: ALL">> /etc/sudoers'
+EXEC_LINE="echo \"$USER ALL=(ALL) NOPASSWD: ALL\">> /etc/sudoers"
+sudo sh -c "$EXEC_LINE"
 
 echo "Installing skype"
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ precise partner' >> /etc/apt/sources.list.d/canonical_partner.list"
@@ -98,7 +99,7 @@ sudo apt-get -y install vlc
 
 echo "Installing VirtualBox"
 sudo apt-get -y install virtualbox
-sudo usermod -aG vboxusers yura
+sudo usermod -aG vboxusers $USER
 
 echo "Installing EagleCAD"
 sudo apt-get -y install eagle
@@ -128,7 +129,7 @@ winecfg
 
 echo "Installing usboscil"
 wget http://oscill.com/files/osclb143.zip -O /tmp/oscill.zip
-unzip /tmp/oscill.zip -d /home/yura/.wine/drive_c/
-ln -s /dev/ttyUSB0 /home/yura/.wine/dosdevices/com1
-sudo usermod -a -G dialout yura
+unzip /tmp/oscill.zip -d /home/$USER/.wine/drive_c/
+ln -s /dev/ttyUSB0 /home/$USER/.wine/dosdevices/com1
+sudo usermod -a -G dialout $USER
 sudo cp usboscil.desktop /usr/share/applications/usboscil.desktop

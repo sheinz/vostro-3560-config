@@ -22,4 +22,4 @@ sudo apt-get update
 sudo apt-get -y install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
 sudo chgrp -R plugdev /dev/bus/usb/
-sudo usermod -a -G plugdev yura
+sudo usermod -a -G plugdev $USER
