@@ -1,0 +1,22 @@
+[user]
+	name = Yuriy Skriyka\n
+	email = yuraofo@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/yura/.gitignore
+[color]
+	ui = true
+[alias]
+	st = status
+	log = log --oneline
+	co = checkout
+	ci = commit
+	dfs = diff --staged
+	logg = log --graph --decorate --oneline --abbrev-commit --all
+[diff]
+	external = git-meld
+[pager]
+	diff = 
+[push]
+	default = current
+

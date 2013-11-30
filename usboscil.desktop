@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=usboscil
+Comment=USB osciloscope
+Exec=wine /home/yura/.wine/drive_c/oscill_beta/oscill.exe
+Terminal=false
+Icon=wine
+Type=Application
+Categories=Wine;
