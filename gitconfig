@@ -13,6 +13,7 @@
 	ci = commit
 	dfs = diff --staged
 	logg = log --graph --decorate --oneline --abbrev-commit --all
+    di = !/usr/bin/git-meld.pl
 [diff]
 	external = git-meld
 [pager]

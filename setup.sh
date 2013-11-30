@@ -45,6 +45,10 @@ echo "source ~/.git-completion.bash" >> ~/.bashrc
 echo "source ~/.git-prompt.sh" >> ~/.bashrc
 TEMP_PS1='\W$(__git_ps1 "(%s)") > '
 echo "PS1='${TEMP_PS1}'" >> ~/.bashrc
+wget https://raw.github.com/wmanley/git-meld/master/git-meld.pl -O /tmp/git-meld.pl
+chmod +x /tmp/git-meld.pl
+sudo cp /tmp/git-meld.pl /usr/bin/git-meld.pl
+
 
 echo "Installing encfs"
 sudo apt-get -y install encfs
