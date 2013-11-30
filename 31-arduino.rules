@@ -1,0 +1,13 @@
+# Please test and place config for other programmers here
+# # JTAGICE mkII 
+# ATTR{idVendor}=="03eb", ATTR{idProduct}=="2103", GROUP="users", MODE="0666" 
+# # AVRISP mkII 
+# ATTR{idVendor}=="03eb", ATTR{idProduct}=="2104", GROUP="users", MODE="0666" 
+# # Dragon
+# ATTR{idVendor}=="03eb", ATTR{idProduct}=="2107", GROUP="users", MODE="0666"
+# # USBTiny
+SUBSYSTEM=="usb",ACTION=="add",ATTRS{idVendor}=="2341",ATTRS{idProduct}=="0010",MODE="666",GROUP="plugdev",SYMLINK+="arduino arduino_$attr{serial}" 
+#SUBSYSTEM=="usb", ATTR{idVendor}=="2341", MODE="0666", GROUP="plugdev"
+
+# DOES NOT WORK!
+#
